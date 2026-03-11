@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-dm: 'DM Sans', sans-serif;
+
+  /* ── Theme colors — keep in sync with src/config/theme.ts ── */
+  --color-accent: #c92e8e;
+  --color-accent-light: #e040aa;
+  --color-accent-gradient-end: #7c3aed;
+  --color-bg-base: #050508;
+  --color-bg-surface: #090912;
+  --color-fg-primary: #f5f4f0;
+  --color-fg-muted: #8a8a9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050508;
+  color: #f5f4f0;
+  font-family: var(--font-dm);
+  overflow-x: hidden;
+}
+
+/* Noise overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050508; }
+::-webkit-scrollbar-thumb { background: rgba(201,46,142,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201,46,142,0.7); }
+
+/* Selection */
+::selection { background: rgba(201,46,142,0.3); color: #f5f4f0; }
+
+@layer utilities {
+  .font-syne { font-family: var(--font-syne); }
+  .font-dm { font-family: var(--font-dm); }
+  
+  .text-magenta { color: #c92e8e; }
+  .text-magenta-light { color: #e040aa; }
+  .text-muted { color: #8a8a9a; }
+  .text-brand-white { color: #f5f4f0; }
+  
+  .bg-brand-black { background-color: #050508; }
+  .bg-brand-surface { background-color: #090912; }
+  .bg-brand-card { background-color: rgba(255,255,255,0.03); }
+  .border-brand { border-color: rgba(255,255,255,0.07); }
+  
+  .gradient-magenta {
+    background: linear-gradient(135deg, #c92e8e, #7c3aed);
+  }
+  
+  .glow-magenta {
+    box-shadow: 0 0 30px rgba(201,46,142,0.3);
+  }
+}
