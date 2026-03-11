@@ -44,7 +44,7 @@ export default function Footer() {
 
         {/* Copy */}
         <span className="text-[#8a8a9a] text-[0.75rem] w-full md:w-auto">
-          © {new Date().getFullYear()} Synteric Mindworks · A division of TCB Infotech Pvt Ltd
+          © {new Date().getFullYear()} Synteric Mindworks 
         </span>
       </div>
     </footer>

@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
             </table>
           </div>
           <p style="text-align: center; font-size: 12px; color: #aaa; margin-top: 20px;">
-            Synteric Mindworks · A division of TCB Infotech Pvt Ltd
+            Synteric Mindworks 
           </p>
         </div>
       `,

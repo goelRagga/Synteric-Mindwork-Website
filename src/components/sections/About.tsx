@@ -29,7 +29,7 @@ export default function About() {
 
             <Reveal delay={0.1}>
               <p className="mt-8 text-[0.95rem] text-[#8a8a9a] leading-[1.8]">
-                Founded in 2022, Synteric Mindworks (a division of TCB Infotech Pvt Ltd) was built on a straightforward premise: the gap between AI research and enterprise deployment is where most companies fail. We exist to close that gap.
+                Founded in 2022, Synteric Mindworks was built on a straightforward premise: the gap between AI research and enterprise deployment is where most companies fail. We exist to close that gap.
               </p>
               <p className="mt-4 text-[0.95rem] text-[#8a8a9a] leading-[1.8]">
                 While companies like OpenAI, Anthropic, and Cohere define the frontier of AI research, and systems integrators simply resell their APIs, Synteric Mindworks occupies a distinct position — we develop custom, production-hardened AI systems on top of cutting-edge foundations, tailored precisely to your industry, data, and compliance needs.
