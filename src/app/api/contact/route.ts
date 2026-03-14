@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Synteric Mindworks <onboarding@resend.dev>",
+      from: "Synteric Mindworks <noreply@syntericmindworks.com>",
       to: ["info@syntericmindworks.com"],
       replyTo: email,
       subject: `New Strategy Session Request — ${name}${company ? ` (${company})` : ""}`,
